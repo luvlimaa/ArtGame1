@@ -45,7 +45,7 @@ submitButton.addEventListener("click", () => {
     );
 
     // Uncomment and set your next URL if needed:
-    window.location.href = "https://g5vhfh.csb.app/";
+    window.location.href = "https://soskayla.github.io/ArtsCarnageCarnival/";
   } else {
     alert("Incorrect! Try again or it's bye-bye Eric.");
   }
@@ -77,3 +77,4 @@ function hideElement(id) {
   const elem = document.getElementById(id);
   if (elem) elem.style.display = "none";
 }
+
