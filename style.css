@@ -1,0 +1,299 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Image resizing */
+img {
+  max-height: 50%;
+  max-width: 50%;
+}
+
+/* Divide up the page */
+.row {
+  height: calc(100% / 3);
+  width: 100%;
+  display: flex;
+}
+
+.right {
+  height: 100%;
+  width: 30%;
+  display: block;
+}
+
+.left {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/carnival.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Each row box inside */
+.box {
+  height: 100%;
+  width: calc(100% / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Transparent overlay boxes */
+.transparent-div {
+  flex: 1;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Right-side layout boxes */
+.right-box-one {
+  height: 50%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/fence.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.right-box {
+  height: 50%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/danger.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Fonts and text */
+h1 {
+  font-family: "Nosifer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 60px;
+  color: #770000;
+}
+h2 {
+  font-family: "Meie Script";
+  margin: 0;
+  text-align: center;
+  font-size: 100px;
+}
+
+.center-content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.bottom-right {
+  position: relative;
+  right: 0%;
+  top: 60%;
+  transform: translateY(-40%);
+  width: 80%;
+  height: 30%;
+}
+
+.picfill {
+  width: 100%;
+}
+
+/* Color helper classes */
+.grey {
+  background-color: #505050;
+}
+
+.red {
+  background-color: #be0000;
+}
+
+.purple {
+  background-color: #70008b;
+}
+
+.pink {
+  background-color: #f11f9a;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.dpink {
+  background-color: #ff55e3;
+}
+
+.dark-grey {
+  background-color: #303030;
+}
+
+.orange {
+  background-color: #ff802c;
+}
+.black {
+  background-color: #000000;
+}
+/* modal classes */
+.modal {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  z-index: 10;
+  width: 80%;
+  height: 80%;
+  background-color: #000000;
+  opacity: 0.95;
+  justify-content: center;
+  align-items: center;
+}
+.clickable1:hover {
+  cursor: pointer;
+  filter: brightness(100%) drop-shadow(4px 12px 6px);
+  transform: scale(1.04);
+}
+
+.modalTwo {
+  display: none;
+  position: fixed;
+
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-top-row {
+  height: 70%;
+  width: 100%;
+  display: flex;
+}
+.modal-bottom-row {
+  height: 30%;
+  width: 100%;
+  display: flex;
+}
+.modal-box {
+  height: 100%;
+  width: 25%;
+  display: flex;
+}
+.modal-head {
+  height: 20%;
+  width: 100%;
+  display: flex;
+}
+.modal-body {
+  height: 80%;
+  width: 100%;
+  display: flex;
+}
+/* close button */
+.close {
+  color: red;
+  position: fixed;
+  top: 9%;
+  right: 12%;
+  font-size: 100px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+}
+.item {
+  width: 100%;
+  cursor: pointer;
+  margin: 10px;
+}
+input {
+  width: 50%;
+  height: 20%;
+  font-size: 50px;
+  padding: 5px;
+}
+
+/* News modal styling */
+.news-modal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  background-color: #000000; /* Fully opaque black background */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Remove border-radius so no rounding */
+.news-modal img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 0;
+  display: block;
+}
+
+.close-news {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.artLeft {
+  position: absolute;
+  bottom: 25%;
+  left: 1%;
+  max-width: 100%;
+  height: auto;
+}
+.dialogue {
+  position: absolute;
+  bottom: 25%;
+  right: 15%;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  margin-left: 0px;
+  height: 22.5%;
+  width: 25%;
+  font-size: 50px;
+  padding: 5px;
+}
+
+@media only screen and (max-width: 900px) {
+}

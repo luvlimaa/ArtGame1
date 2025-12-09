@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Game 2</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="left transparent-div center-content picfill">
+      <div class="row transparent-div center-content">
+        <div class="box transparent-div center-content">
+          <img
+            src="images/axe.png"
+            onclick="pickAxe()"
+            id="axe"
+            class="item"
+            draggable="false"
+          />
+        </div>
+        <div class="box transparent-div center-content"></div>
+        <div class="box transparent-div center-content"></div>
+      </div>
+      <div class="row transparent-div center-content">
+        <div class="box transparent-div center-content"></div>
+        <div class="box transparent-div center-content"></div>
+        <div class="box transparent-div center-content">
+          <img src="images/rope.png" id="rope" class="item" draggable="false" />
+        </div>
+      </div>
+      <div class="row transparent-div center-content">
+        <div class="box transparent-div center-content">
+          <img
+            src="images/paintbrush.png"
+            id="paintbrush"
+            class="item"
+            draggable="false"
+          />
+        </div>
+        <div class="box transparent-div center-content"></div>
+        <div class="box transparent-div center-content">
+          <img
+            src="images/train.png"
+            id="train"
+            class="item"
+            draggable="false"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="right red">
+      <div class="right-box-one black center-content">
+        <img
+          src="images/lock.png"
+          class="clickable1"
+          onclick="showModal()"
+          id="lock"
+        />
+      </div>
+      <div class="right-box black"></div>
+    </div>
+
+    <!-- Modal for lock -->
+    <div class="modal center-content" id="myModal">
+      <span class="close" onclick="hideModal()">&times;</span>
+      <div class="modal-top-row black center-content">
+        <input
+          type="text"
+          id="userAnswer"
+          autocomplete="off"
+          placeholder="Enter the word..."
+        />
+        <button id="submitAnswer" class="clickable1">Submit</button>
+      </div>
+      <div class="modal-bottom-row pink">
+        <div class="modal-box black"></div>
+        <div class="modal-box black"></div>
+        <div class="modal-box black"></div>
+        <div class="modal-box black"></div>
+      </div>
+    </div>
+
+    <!-- Dialogue modal -->
+    <div class="modalTwo center-content" id="dialogueModal">
+      <span class="close" onclick="hideElement('dialogueModal')">&times;</span>
+      <img src="images/newDialogue.png" class="dialogue" />
+      <img src="images/popup.png" class="artLeft" />
+    </div>
+
+    <!-- News modal -->
+    <div id="newsModal" class="news-modal">
+      <span class="close-news" onclick="closeNews()">&times;</span>
+      <img src="images/newspaper2.png" class="news-img" />
+    </div>
+
+    <script src="script.js"></script>
+    <audio id="bgMusic" src="sounds/bgm.mp3" loop></audio>
+  </body>
+</html>
